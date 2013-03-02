@@ -32,8 +32,10 @@ function! s:Reek()
   endfor
 
   call setloclist(0, loclist)
-  exec has("gui_running") ? "redraw!" : "redraw"
-  silent! ll
+  if len(loclist) > 0
+    exec has("gui_running") ? "redraw!" : "redraw"
+    ll
+  endif
 endfunction
 
 augroup reek_plugin

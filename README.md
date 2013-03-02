@@ -2,14 +2,20 @@
 
 Code smell detector for Ruby in Vim.
 
-### Screenshots
+> [Reek](https://github.com/troessner/reek) is a tool that examines Ruby
+> classes, modules and methods and reports any code smells it finds.
 
-![Quadro](http://f.cl.ly/items/0o1J0o1f320D2m0U0z0u/Screen%20Shot%202013-03-02%20at%202.03.04%20PM.png)
+### Usage
+
+Open any Ruby file and you will be able to see the messages using the location
+list. See `:help location-list`.
 
 ### Todo
 
-- Compatibility with others code metrics gems like [flog](http://ruby.sadi.st/Flog.html) and [flay](http://ruby.sadi.st/Flay.html).
-- Documentation
+- Compatibility with others code metrics gems like
+  [flog](http://ruby.sadi.st/Flog.html) and
+  [flay](http://ruby.sadi.st/Flay.html).
+- Vim Documentation
 
 ### License
 

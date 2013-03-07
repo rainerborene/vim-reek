@@ -17,6 +17,12 @@ list (e.g. by invoking `:lopen` or `:ll`). See more about location using
 Place the `plugin/reek.vim` file in your `.vim/plugin` directory.
 Please make sure that `reek` is up-to-date.
 
+This plugin is also compatible with 
+[pathogen](https://github.com/tpope/vim-pathogen). 
+Integration can be implemented similar to 
+[syntastic](https://github.com/scrooloose/syntastic) (where you also can find 
+a nice set-up guide in the README)
+
 ### Todo
 
 - Compatibility with others code metrics gems like

@@ -9,6 +9,10 @@ endif
 
 let g:loaded_reek = 1
 
+if !exists('g:reek_always_show')
+  let g:reek_always_show = 1
+endif
+
 if !exists('g:reek_debug')
   let g:reek_debug = 0
 endif
@@ -34,7 +38,9 @@ function! s:Reek()
   call setloclist(0, loclist)
   if len(loclist) > 0
     exec has("gui_running") ? "redraw!" : "redraw"
-    ll
+    if g:reek_always_show
+      ll
+    endif
   endif
 endfunction
 

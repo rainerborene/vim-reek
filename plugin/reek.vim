@@ -18,6 +18,12 @@ if !exists('g:reek_debug')
 endif
 
 function! s:Reek()
+  if exists('g:reek_line_limit')
+    if line('$') > g:reek_line_limit
+      return
+    endif
+  endif
+
   let metrics = system("reek -n " . expand("%:p"))
   let loclist = []
   let bufnr = bufnr('%')

@@ -1,0 +1,36 @@
+*reek.txt* Code smell detector for Ruby in Vim
+
+Author:  Rainer Borene <https://github.com/rainerborene>
+Repo:    https://github.com/rainerborene/vim-reek
+License: Same terms as Vim itself (see |license|)
+
+INTRODUCTION                                        *reek-introduction* *reek*
+
+Reek is a tool that examines Ruby classes, modules and methods and reports any
+code smells it finds.
+
+CONFIGURATION                                       *reek-configuration*
+
+                                                    *g:reek_always_show*
+By default, any messages are shown when a file is loaded or saved. If you want
+to only show messages when you open the location list, set the following in
+your vimrc file:
+>
+	let g:reek_always_show = 0
+<
+
+                                                    *g:reek_line_limit*
+Checking large files (> 1000 lines) can take a while. To load larger files
+quicker, you can limit maximum number of lines a file can have and still be
+checked. Files bigger than this limit will not be checked:
+>
+	let g:reek_line_limit = 1000
+<
+With no line limit set, all files will be checked.
+
+LICENSE                                             *reek-license*
+
+Copyright (c) Rainer Borene.  Distributed under the same terms as Vim itself.
+See |license|.
+
+ vim:tw=78:ts=8:ft=help:norl:

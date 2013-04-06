@@ -45,13 +45,6 @@ Integration can be implemented similar to
 [syntastic](https://github.com/scrooloose/syntastic) (where you also can find 
 a nice set-up guide in the README)
 
-### Todo
-
-- Compatibility with others code metrics gems like
-  [flog](http://ruby.sadi.st/Flog.html) and
-  [flay](http://ruby.sadi.st/Flay.html).
-- Vim Documentation
-
 ### License
 
 Copyright (c) Rainer Borene. Distributed under the same terms as Vim itself. See

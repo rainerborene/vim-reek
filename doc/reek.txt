@@ -28,17 +28,17 @@ checked. Files bigger than this limit will not be checked:
 <
 With no line limit set, all files will be checked.
 
-                                                    g:reek_on_loading
+                                                    *g:reek_on_loading*
 Checking files takes some time, so you may prefer to only check files on
 demand. To turn off file check on loading:
 >
         let g:reek_on_loading = 0
 <
 
-FUNCTIONS
+COMMANDS                                            *reek-commands*
 
-                                                    g:RunReek()
-Function to run Reek on current file, and display locations
+:RunReek                                            *:RunReek*
+Command to run Reek on current file, and display locations
 
 LICENSE                                             *reek-license*
 

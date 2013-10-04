@@ -52,8 +52,8 @@ function! s:Reek()
   endif
 endfunction
 
-" Global function to run reek and display location list
-function g:RunReek()
+" Function to run reek and display location list
+function s:RunReek()
   call s:Reek()
   lopen
 endfunction
@@ -66,3 +66,4 @@ if g:reek_on_loading
   augroup END
 endif
 
+command! RunReek call s:RunReek()

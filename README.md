@@ -34,6 +34,18 @@ have and still be checked. Files bigger than this limit will not be checked:
 
 With no line limit set, all files will be checked.
 
+#### Check on demand
+
+To only check files on demand, set:
+
+    let g:reek_on_loading = 0
+
+And then call:
+
+    :call g:RunReek()
+
+Location list will open in a new buffer.
+
 ### Installation
 
 Place the `plugin/reek.vim` file in your `.vim/plugin` directory.

@@ -40,9 +40,9 @@ To only check files on demand, set:
 
     let g:reek_on_loading = 0
 
-And then call:
+And then, to check the currently displayed file, call:
 
-    :call g:RunReek()
+    :RunReek
 
 Location list will open in a new buffer.
 

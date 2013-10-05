@@ -44,8 +44,8 @@ function! s:Reek()
   if len(loclist) > 0
     exec has("gui_running") ? "redraw!" : "redraw"
     if g:reek_always_show
-      " Don't show first location unless we are running reek on loading
-      if !g:reek_on_loading
+      " Only show location if we are running reek on loading
+      if g:reek_on_loading
         ll
       endif
     endif

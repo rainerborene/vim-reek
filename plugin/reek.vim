@@ -15,6 +15,10 @@ if !exists('g:reek_debug')
   let g:reek_debug = 0
 endif
 
+if !exists('g:reek_on_loading')
+  let g:reek_on_loading = 1
+endif
+
 function! s:Reek()
   if exists('g:reek_line_limit') && line('$') > g:reek_line_limit
     return
@@ -40,12 +44,26 @@ function! s:Reek()
   if len(loclist) > 0
     exec has("gui_running") ? "redraw!" : "redraw"
     if g:reek_always_show
-      ll
+      " Only show location if we are running reek on loading
+      if g:reek_on_loading
+        ll
+      endif
     endif
   endif
 endfunction
 
-augroup reek_plugin
-  autocmd!
-  autocmd! BufReadPost,BufWritePost,FileReadPost,FileWritePost *.rb call s:Reek()
-augroup END
+" Function to run reek and display location list
+function s:RunReek()
+  call s:Reek()
+  lopen
+endfunction
+
+" Only set up automatic call if we request reek_on_loading
+if g:reek_on_loading
+  augroup reek_plugin
+    autocmd!
+    autocmd! BufReadPost,BufWritePost,FileReadPost,FileWritePost *.rb call s:Reek()
+  augroup END
+endif
+
+command! RunReek call s:RunReek()

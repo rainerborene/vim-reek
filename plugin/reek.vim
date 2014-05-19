@@ -24,7 +24,7 @@ function! s:Reek()
     return
   endif
 
-  let metrics = system("reek -n " . expand("%:p"))
+  let metrics = system("reek " . expand("%:p"))
   let loclist = []
 
   if g:reek_debug

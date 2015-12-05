@@ -32,7 +32,7 @@ function! s:Reek()
   endif
 
   for line in split(metrics, '\n')
-    let err = matchlist(line, '\v\s+\[(.*)\]:(.*)')
+    let err = matchlist(line, '\v\s*\[(.*)\]:(.*)')
     if strlen(get(err, 2)) > 1
       for lnum in split(err[1], ', ')
         call add(loclist, { 'bufnr': bufnr('%'), 'lnum': lnum, 'text': err[2] })
